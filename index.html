@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PolypolyFile</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <script src="js/IndexedDBShim.min.js"></script>
+        <script src="js/idb.filesystem.min.js"></script>
+        <script src="js/exif.js"></script>
+        <script src="js/binaryajax.js"></script>
+        <script src="js/megapix-image.js"></script>
+        <script src="js/polypolyfile.js"></script>
+    </head>
+    <body>
+        The following is a simple example of using the 
+        <a href="http://nparashuram.com/IndexedDBShim/">IndexedDB polyfill</a> together 
+        with the <a href="https://github.com/ebidel/idb.filesystem.js">FileSystem API polyfill</a> 
+        for use in browsers that don't natively implement these APIs, in particular 
+        mobile Safari on IOS.
+        <h2>Add photos</h2>
+        <form name="photoupload">
+            <label>Select your photo</label>
+            <input type="file" accept="image/*" capture="camera" id="userphoto">
+        </form>
+        <textarea id="konsole" style="height:50px;width:320px;"></textarea>
+        <div id="loading" style="background-color: #ff0;display:none;"><h3>Loading...</h3></div>
+        <h2>Current File List</h2>
+        <div id="filelist">
+        </div>
+    </body>
+</html>

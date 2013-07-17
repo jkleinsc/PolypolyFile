@@ -2,6 +2,7 @@ PolypolyFile
 ============
 
 What happens you try to use the FileSystem API polyfill on top of the IndexedDB polyfill?
+![alt tag](http://jkleinsc.github.io/PolypolyFile/polypoly.jpg)
 
 1. There is a polyfill for the FileSystem API (//github.com/ebidel/idb.filesystem.js/), that relies on IndexedDB.
 2. There is a polyfill for the IndexedDB API that relies on WebSQL (https://github.com/axemclion/IndexedDBShim).

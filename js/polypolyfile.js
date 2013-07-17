@@ -125,11 +125,9 @@ function saveFile(fileToSave, fileName) {
     fileSystem.root.getFile(fileName, {create: true, exclusive: true}, 
         function(fileEntry) {        
             fileEntry.createWriter(function(fileWriter) {
-                fileWriter.onwrite = function() {
-                    var loading = document.getElementById('loading');
-                    loading.style.display = 'none';
-                }
                 fileWriter.write(fileToSave);
+				var loading = document.getElementById('loading');
+				loading.style.display = 'none';
             }, handleError);                      
         }, 
     handleError);            

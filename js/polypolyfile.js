@@ -20,8 +20,8 @@ function getOrientation(dataURL) {
     var byteString = atob(dataURL.split(',')[1]);
     var binaryFile = new BinaryFile(byteString, 0, byteString.length);
     var exif = EXIF.readFromBinaryFile(binaryFile);
-    if (exif && exif['Orientation']) {
-        return exif['Orientation'];
+    if (exif && exif.Orientation) {
+        return exif.Orientation;
     }
     return 0;
 }
